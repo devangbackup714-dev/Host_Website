@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Personal Website</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../resources/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobbies.html">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
+                    </li>
+                </ul>
+                <!-- Icon on the right -->
+                <span class="navbar-text">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="text-center mb-5">My Projects</h1>
+        
+        <!-- Projects Accordion -->
+        <div class="accordion" id="projectsAccordion">
+            
+            <!-- Project 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                       Deep Learning for Non-Invasive Intoxication Detection
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <!-- Image on the left -->
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img src="../resources/img/img5.jpg" class="img-fluid rounded" alt="E-Commerce Project" width="400" height="400">
+                            </div>
+                            <!-- Description on the right -->
+                            <div class="col-md-8">
+                                <h5>Deep Learning for Non-Invasive Intoxication Detection</h5>
+                                <p>
+                                    Abstract of published paper: Current intoxication methods, though effective, often rely on intrusive procedures that require trained personnel or direct interaction with the individual, limiting their practicality for real-time applications [1], [2]. 
+                                    This study analyzes non-invasive approaches utilizing two Convolutional Neural Networks (CNNs) and a Quanvolutional Neural Network (QNN) trained on eye images to classify sobriety by analyzing visual cues such as pupil dilation, eye redness, and eyelid position. 
+                                    All models were trained and evaluated on a dataset of 1500 labeled images, achieving accuracies ranging from 68.65% to 99.74%.
+                                </p>
+                                <p>
+                                    <strong>Technologies Used:</strong> Python · TensorFlow/Keras · Quantum ML (QNN) · OpenCV · NumPy · Pandas
+                                </p>
+                                <p>
+                                    <strong>Key Features:</strong> Non-invasive intoxication detection using eye images,CNN and Quanvolutional Neural Network (QNN) models, Visual cue analysis (pupil dilation, redness, eyelid position)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2D MRI Image Generation and Classification
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <!-- Image on the left -->
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img src="../resources/img/img6.jpg" class="img-fluid rounded" alt="Weather Dashboard" width="400" height="400">
+                            </div>
+                            <!-- Description on the right -->
+                            <div class="col-md-8">
+                                <h5>Real-Time Weather Tracking System</h5>
+                                <p>
+                                    Abstract of published paper: With over 320,000 new cases diagnosed annually worldwide, brain tumors present a significant global health challenge [1]. 
+                                    Despite the prevalence of these tumors, diagnosis often takes months to attain, leaving a significant lag in treatment initiation. 
+                                    Additionally, the high cost of neuroimaging and the rarity of many brain tumors contribute to a fragmented data landscape, where datasets are often too small or suffer from class imbalances, preventing the development of larger diagnostic models. 
+                                    This research explores how the addition of synthetic data can enhance classification accuracy in brain tumor diagnosis. 
+                                    This study investigates the impact of varying proportions of synthetic data, generated using SD-Turbo, on the classification performance of a ResNet50-based architecture. 
+                                    We tested ResNet50 across eight training conditions with increasing proportions of synthetic MRI tumor images. Our results show that moderate inclusion of synthetic data (up to 50%) led to performance degradation, whereas larger synthetic ratios (≥ 2×) consistently improved all classification metrics. 
+                                    Most notably, synthetic data augmentation at a 1:4 ratio boosted classification accuracy to 94.81%, a 1.3 percent gain over real-data training alone. These findings showcase the potential of integrating synthetic data in enhancing model performance. 
+                                    Our code implementation is publicly available on our GitHub.
+                                </p>
+                                <p>
+                                    <strong>Technologies Used:</strong> Python · PyTorch / TensorFlow · ResNet50 · SD-Turbo (Synthetic Data Generation) · NumPy · Pandas · Matplotlib
+                                </p>
+                                <p>
+                                    <strong>Key Features:</strong> Brain tumor classification from MRI scans, Synthetic data augmentation using SD-Turbo, ResNet50-based deep learning architecture, Evaluation across multiple real-to-synthetic data ratios
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        IntoxDetectV2
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#projectsAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <!-- Image on the left -->
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img src="../resources/img/img7.jpg" class="img-fluid rounded" alt="Task Management System" width="400" height="400">
+                            </div>
+                            <!-- Description on the right -->
+                            <div class="col-md-8">
+                                <h5>Comparative Analysis of CNNs and LLMs for Detection of Intoxication through Ocular and Facial Features Using Ensemble Learning</h5>
+                                <p>
+                                    Drunk driving remains a significant cause of fatalities in the U.S., with one person dying every 39 minutes. 
+                                    Current intoxication detection methods are expensive, time-consuming, and often require specialized equipment and trained personnel [1]. 
+                                    We propose a non-invasive approach using facial image analysis to detect intoxication. 
+                                    Our results show that the VGG16 model, optimized with Adamax and trained on 10,000 facial images, achieved 83% accuracy in detecting inebriation. 
+                                    This method demonstrates strong potential as an AI-based facial intoxication detection system, offering a practical solution to combat drunk driving.
+                                </p>
+                                <p>
+                                    <strong>Technologies Used:</strong> Python · TensorFlow / Keras · VGG16 · Adamax Optimizer · OpenCV · NumPy · Pandas
+                                </p>
+                                <p>
+                                    <strong>Key Features:</strong> Non-invasive intoxication detection using facial imagery,CNN-based feature extraction from ocular and facial cues, VGG16 model optimized with Adamax
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-3">Connect with me:</p>
+            <div class="social-links">
+                <a href="https://github.com/DevangPandey1" target="_blank" class="text-white me-3">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/devangpandeycolorado/" target="_blank" class="text-white me-3">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://x.com/DevangP95670282" target="_blank" class="text-white me-3">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="d6vangpandey@gmail.com" class="text-white">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
