@@ -42,12 +42,29 @@ function updateLocationOptions(modality) {
 }
 
 function saveEvent() {
+  const form = document.getElementById("event_form");
+  const remoteUrlInput = document.getElementById('event_remote_url');
+  const modality = document.getElementById('event_modality').value;
+  const remoteUrlValue = remoteUrlInput.value.trim();
+  const remoteUrlPattern = /^https?:\/\/(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+([/?#][^\s]*)?$/;
+
+  remoteUrlInput.setCustomValidity('');
+  if (modality === 'Remote' && !remoteUrlPattern.test(remoteUrlValue)) {
+    remoteUrlInput.setCustomValidity('Enter a valid URL starting with http:// or https://');
+    remoteUrlInput.reportValidity();
+    return;
+  }
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
   const name = document.getElementById('event_name').value;
   const weekday = document.getElementById('event_weekday').value;
   const time = document.getElementById('event_time').value;
-  const modality = document.getElementById('event_modality').value;
   const location = document.getElementById('event_location').value;
-  const remote_url = document.getElementById('event_remote_url').value;
+  const remote_url = remoteUrlValue;
   const attendees = document.getElementById('event_attendees').value;
   const category = document.getElementById('event_category').value;
 

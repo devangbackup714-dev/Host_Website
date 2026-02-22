@@ -149,7 +149,7 @@
                 <label for="event_remote_url" class="form-label">Remote URL</label>
                 <input type="text" class="form-control" id="event_remote_url" 
                        placeholder="https://example.com/meeting-link" 
-                       pattern="https?://.+">
+                       pattern="^https?:\/\/(?:www\.)?[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+(?::\d{1,5})?(?:\/[^\s]*)?$">
               </div>
 
               <!-- Attendees -->
@@ -175,7 +175,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" onclick="saveEvent()" data-bs-dismiss="modal">Save Event</button>
+            <button type="button" class="btn btn-primary" onclick="saveEvent()">Save Event</button>
           </div>
         </div>
       </div>
